@@ -34,13 +34,13 @@ public class MainActivity extends AppCompatActivity implements FragmentListener 
 
         //fragment controller init.
         fragmentController = fragmentController.getInstance(this.getApplicationContext());
-        onFragmentChange(FragmentController.SIGNUP);
+        onFragmentChange(FragmentController.LOGIN);
     }
 
 
     @Override
     public void onFragmentChange(FragmentModel fragment) {
-        this.onFragmentChange(fragment);
+        this.onFragmentChange(fragment,null);
     }
 
     @Override
@@ -49,10 +49,10 @@ public class MainActivity extends AppCompatActivity implements FragmentListener 
             fragmentStack.add(fragment);
             bundleStack.add(bundle);
 
+            if (fragment.getFragmentId().equals(FragmentController.REZERVASYON.getFragmentId()));
 
 
-
-            FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             FragmentController controller = fragmentController.getInstance(this);
             Fragment tFragment = controller.getFragment(fragment.getFragmentId(), bundle);

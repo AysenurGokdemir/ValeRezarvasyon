@@ -62,7 +62,7 @@ public class SignUpFragment extends BaseFragment {
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Employee employee = new Employee(parseInt(edtSignupPassword.getText().toString()), edtSignupName.getText().toString(), edtSignupSurName.getText().toString());
+               Employee employee = new Employee(parseInt(edtSignupPassword.getText().toString()), edtSignupName.getText().toString(), edtSignupSurName.getText().toString());
                 Call<Employee> call = service.postEmployee(employee);
                 Log.w("request", call.request().toString());
                 call.enqueue(new Callback<Employee>() {
@@ -74,14 +74,7 @@ public class SignUpFragment extends BaseFragment {
                             userResponseList = new ArrayList<List<Employee>>();
                             userResponseList.add(employee1);
                             fragmentController = fragmentController.getInstance(getActivity());
-                            try
-                            {
-                                listener.onFragmentChange(FragmentController.REZERVASYON);
-                            }
-                            catch (NullPointerException ep)
-                            {
-                                throw ep;
-                            }
+
 
                             //listener.onFragmentChange(FragmentController.REZERVASYON);
 
@@ -95,8 +88,9 @@ public class SignUpFragment extends BaseFragment {
                     public void onFailure(Call<Employee> call, Throwable t) {
                         t.printStackTrace();
                     }
-                });
 
+                });
+                listener.onFragmentChange(FragmentController.LOGIN);
             }
         });
     }

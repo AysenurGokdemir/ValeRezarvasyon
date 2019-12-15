@@ -4,12 +4,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.valerezarvasyon.R;
 import com.example.valerezarvasyon.api.ClientApi;
 import com.example.valerezarvasyon.api.EmployeeApi;
 import com.example.valerezarvasyon.helper.fragment.BaseFragment;
-import com.example.valerezarvasyon.helper.fragment.FragmentController;
 import com.example.valerezarvasyon.model.Rezervasyon;
 
 import java.util.ArrayList;
@@ -68,9 +68,10 @@ public class RezervasyonFragment extends BaseFragment {
                             rezResponseList=new ArrayList<>();
                             rezResponseList.add(rez1);
 
-                            listener.onFragmentChange(FragmentController.SIGNUP);
+
                         }else{
-                            listener.onFragmentChange(FragmentController.LOGIN);
+                            Toast.makeText(getContext(), "null", Toast.LENGTH_LONG).show();
+
                         }
                     }
 

@@ -4,7 +4,6 @@ import android.content.Context;
 import android.os.Bundle;
 
 import com.example.valerezarvasyon.R;
-import com.example.valerezarvasyon.fragments.ExampleFragment;
 import com.example.valerezarvasyon.fragments.RezervasyonFragment;
 import com.example.valerezarvasyon.fragments.SignUpFragment;
 import com.example.valerezarvasyon.model.FragmentModel;
@@ -63,8 +62,6 @@ public class FragmentController {
         } else {
             currentFragment = fragment;
             if (fragment.equals(REZERVASYON.getFragmentId())) return new RezervasyonFragment();
-
-            else if (fragment.equals(EXAMPLE.getFragmentId())) return new ExampleFragment();
             else if (fragment.equals(SIGNUP.getFragmentId())) return new SignUpFragment();
             //else if (fragment.equals(SIGNUP.getFragmentId())) return new SignUpFragment();
 

@@ -52,7 +52,7 @@
            >
 
             <Button
-                android:id="@+id/btn_new_register"
+                android:id="@+id/btn_login"
 
                 android:layout_width="180dp"
                 android:layout_height="60dp"
@@ -64,7 +64,7 @@
                 android:textSize="20sp" />
 
             <Button
-                android:id="@+id/btn_sign_in"
+                android:id="@+id/btn_register"
 
                 android:layout_width="120dp"
                 android:layout_height="60dp"
