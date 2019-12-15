@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="800dp"
+    android:background="#309611"
+    android:orientation="vertical"
+    tools:context=".fragments.SignUpFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#309611"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+
+        android:gravity="center"
+        >
+
+        <EditText
+            android:id="@+id/edt_name"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/style_edit_text"
+            android:ellipsize="start"
+            android:gravity="center"
+            android:hint="Ad"></EditText>
+
+
+        <EditText
+            android:id="@+id/edt_surname"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/style_edit_text"
+            android:ellipsize="start"
+            android:gravity="center"
+            android:hint="Soyad"></EditText>
+
+        <EditText
+            android:id="@+id/edt_email"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/style_edit_text"
+            android:ellipsize="start"
+            android:gravity="center"
+            android:hint="E Mail">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/edt_telepone_number"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/style_edit_text"
+            android:ellipsize="start"
+            android:gravity="center"
+            android:hint="Telefon"></EditText>
+
+        <EditText
+            android:id="@+id/edt_password"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/style_edit_text"
+            android:ellipsize="start"
+            android:gravity="center"
+            android:hint="Şifre"></EditText>
+        <Button
+            android:id="@+id/angry_btn"
+
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/style_button"
+
+            android:text="Üye Ol"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

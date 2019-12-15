@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#309611"
+    tools:context=".fragments.SignInFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="150dp">
+
+        <EditText
+            android:id="@+id/edt_in_mail"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/style_edit_text"
+            android:ellipsize="start"
+            android:gravity="center"
+            android:hint="E Posta"></EditText>
+
+        <EditText
+            android:id="@+id/edt_in_password"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/style_edit_text"
+            android:ellipsize="start"
+            android:gravity="center"
+            android:hint="Şifre"></EditText>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="40dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp"
+           >
+
+            <Button
+                android:id="@+id/btn_new_register"
+
+                android:layout_width="180dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/style_button_grey"
+
+                android:text="Giriş Yap"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btn_sign_in"
+
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/style_button"
+                android:text="Yeni Üyelik"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>
+
