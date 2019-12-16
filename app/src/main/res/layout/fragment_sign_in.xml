@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="750dp"
     android:orientation="vertical"
     android:background="#309611"
     tools:context=".fragments.SignInFragment">
@@ -10,8 +10,22 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="150dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/vale_parking"></ImageView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingTop="150dp">
+        android:paddingTop="100dp">
 
         <EditText
             android:id="@+id/edt_in_mail"
@@ -19,8 +33,8 @@
             android:layout_height="60dp"
             android:layout_centerVertical="true"
             android:layout_marginBottom="3dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/style_edit_text"
             android:ellipsize="start"
@@ -33,28 +47,28 @@
             android:layout_height="60dp"
             android:layout_centerVertical="true"
             android:layout_marginBottom="3dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/style_edit_text"
             android:ellipsize="start"
             android:gravity="center"
             android:hint="Şifre"></EditText>
-
+    </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="170dp"
             android:orientation="horizontal"
-            android:paddingTop="40dp"
+            android:paddingBottom="20dp"
             android:paddingLeft="50dp"
             android:paddingRight="20dp"
-            android:paddingBottom="20dp"
-           >
+            android:paddingTop="40dp">
 
             <Button
                 android:id="@+id/btn_login"
-
-                android:layout_width="180dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="30dp"
+                android:layout_width="140dp"
                 android:layout_height="60dp"
                 android:layout_marginEnd="10dp"
                 android:background="@drawable/style_button_grey"
@@ -66,7 +80,7 @@
             <Button
                 android:id="@+id/btn_register"
 
-                android:layout_width="120dp"
+                android:layout_width="110dp"
                 android:layout_height="60dp"
                 android:layout_marginEnd="10dp"
                 android:background="@drawable/style_button"
@@ -75,6 +89,6 @@
                 android:textSize="18sp" />
         </LinearLayout>
 
-    </LinearLayout>
-</FrameLayout>
+
+</LinearLayout>
 

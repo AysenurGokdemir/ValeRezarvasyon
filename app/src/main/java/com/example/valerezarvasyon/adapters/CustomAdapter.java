@@ -6,7 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.valerezarvasyon.MainActivity;
 import com.example.valerezarvasyon.R;
+import com.example.valerezarvasyon.helper.fragment.FragmentController;
 import com.example.valerezarvasyon.model.Company;
 
 import java.util.List;
@@ -16,7 +18,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder>  {
     private List<Company> companyArrayList;
-
+    private static MainActivity obj=new MainActivity();
+    private static FragmentController fragmentController = new FragmentController();
     private Context context;
 
 
@@ -30,7 +33,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
     @Override
     public CustomAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_company, parent, false);
         final MyViewHolder myViewHolder = new MyViewHolder(view);
 
         return myViewHolder;
@@ -64,6 +67,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             companyDistance = view.findViewById(R.id.companyDistance);
             companyService = view.findViewById(R.id.companyService);
             companyServiceTime = view.findViewById(R.id.companyServiceTime);
+
+
 
         }
     }

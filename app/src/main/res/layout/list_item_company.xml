@@ -3,191 +3,197 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingBottom="5dp"
     android:orientation="vertical"
-    android:background="#309611">
+    android:background="@color/colorPrimaryDark"
+    >
 
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent">
+
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
         android:text="Seçim Sonuçlarınız : ">
 
     </TextView>
-</LinearLayout>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="170dp"
         android:layout_gravity="center"
         android:layout_margin="10dp"
         android:elevation="3dp"
         card_view:cardCornerRadius="8dp"
         tools:ignore="MissingPrefix">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-           >
 
 
 
             <LinearLayout
-                android:layout_margin="10dp"
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
 
 
                 <LinearLayout
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
 
                     <LinearLayout
-                        android:layout_marginBottom="10dp"
-                        android:weightSum="1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
                         android:gravity="center_vertical"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:weightSum="1">
 
                         <TextView
-                            android:textSize="15sp"
-                            android:textStyle="bold"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.4"
-                            android:text="@string/company_name" />
+                            android:text="@string/company_name"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
 
                         <TextView
-                            android:textStyle="italic"
-                            android:textSize="12sp"
                             android:id="@+id/companyName"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.6"
-                            android:text="" />
+                            android:text=""
+                            android:textSize="12sp"
+                            android:textStyle="italic" />
 
                     </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:text="@string/companyDistance"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/companyDistance"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:textSize="12sp"
+                            android:textStyle="italic" />
+                    </LinearLayout>
+
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginBottom="8dp"
-                        android:background="@android:color/darker_gray"/>
-                    <LinearLayout
-                        android:layout_marginBottom="10dp"
-                        android:weightSum="1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <TextView
-
-                            android:textSize="12sp"
-                            android:textStyle="bold"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.4"
-                            android:text="@string/companyDistance" />
-
-                        <TextView
-                            android:textStyle="italic"
-                            android:textSize="12sp"
-                            android:id="@+id/companyDistance"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.6" />
-                    </LinearLayout>
+                        android:background="@android:color/darker_gray" />
 
 
                 </LinearLayout>
 
 
                 <LinearLayout
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
 
                     <LinearLayout
-                        android:layout_marginBottom="10dp"
-                        android:weightSum="1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
                         android:gravity="center_vertical"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:weightSum="1">
 
                         <TextView
-                            android:textSize="12sp"
-                            android:textStyle="bold"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.4"
-                            android:text="@string/companyService" />
+                            android:text="@string/companyService"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
 
                         <TextView
-                            android:textStyle="italic"
-                            android:textSize="12sp"
                             android:id="@+id/companyService"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.6"
-                             />
+                            android:textSize="12sp"
+                            android:textStyle="italic" />
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_marginBottom="10dp"
-                        android:weightSum="1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
                         android:gravity="center_vertical"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:weightSum="1">
 
                         <TextView
-                            android:textSize="12sp"
-                            android:textStyle="bold"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.4"
-                            android:text="@string/serviceTime" />
+                            android:text="@string/serviceTime"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
 
                         <TextView
-                            android:textStyle="italic"
-                            android:textSize="12sp"
                             android:id="@+id/companyServiceTime"
-                            android:text=""
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="0.6" />
+                            android:layout_weight="0.6"
+                            android:text=""
+                            android:textSize="12sp"
+                            android:textStyle="italic" />
+
                     </LinearLayout>
+
+
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginBottom="20dp"
-                        android:background="@android:color/darker_gray"/>
+                        android:background="@android:color/darker_gray" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="300dp"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="250dp"
+                        android:layout_marginRight="250dp"
+
                         android:text="Detaylar">
 
                     </TextView>
-                </LinearLayout>
 
                 </LinearLayout>
 
-        </RelativeLayout>
+
+            </LinearLayout>
+
+
 
     </androidx.cardview.widget.CardView>
+
 
 </LinearLayout>

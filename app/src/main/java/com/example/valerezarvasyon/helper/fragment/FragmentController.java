@@ -4,7 +4,9 @@ import android.content.Context;
 import android.os.Bundle;
 
 import com.example.valerezarvasyon.R;
+import com.example.valerezarvasyon.fragments.CompanyFragment;
 import com.example.valerezarvasyon.fragments.RezervasyonFragment;
+import com.example.valerezarvasyon.fragments.SignInFragment;
 import com.example.valerezarvasyon.fragments.SignUpFragment;
 import com.example.valerezarvasyon.model.FragmentModel;
 
@@ -18,8 +20,8 @@ public class FragmentController {
 
     public static FragmentModel LOGIN;
     public static FragmentModel SIGNUP;
-    public static FragmentModel EXAMPLE;
     public static FragmentModel REZERVASYON;
+    public static FragmentModel COMPANY;
 
     /**
      * Fragmentların tanımlandığı fonksiyon.
@@ -29,7 +31,7 @@ public class FragmentController {
         LOGIN = new FragmentModel("fragment_sign_in", context.getResources().getString(R.string.sign_In));
         SIGNUP = new FragmentModel("fragment_sign_up", context.getResources().getString(R.string.sign_Up));
         REZERVASYON=new FragmentModel("fragment_rezervasyon","REZERVASYON YAP");
-
+        COMPANY=new FragmentModel("fragment_company","company");
 
     }
     public FragmentController() {
@@ -61,9 +63,10 @@ public class FragmentController {
             return null;
         } else {
             currentFragment = fragment;
-            if (fragment.equals(REZERVASYON.getFragmentId())) return new RezervasyonFragment();
+            if (fragment.equals(LOGIN.getFragmentId())) return new SignInFragment();
+            else if (fragment.equals(REZERVASYON.getFragmentId())) return new RezervasyonFragment();
             else if (fragment.equals(SIGNUP.getFragmentId())) return new SignUpFragment();
-            //else if (fragment.equals(SIGNUP.getFragmentId())) return new SignUpFragment();
+            else if (fragment.equals(COMPANY.getFragmentId())) return new CompanyFragment();
 
             return null;
         }

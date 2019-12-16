@@ -23,11 +23,12 @@ import retrofit2.Response;
 public class RezervasyonFragment extends BaseFragment {
     private CheckBox checkYikama;
     private CheckBox checkYakit;
-    private Button btnOnay;
+    private CheckBox checkOnay;
+    private Button btnRez;
     private EditText edtnot;
     private List<List<Rezervasyon>> rezResponseList;
     private EmployeeApi service;
-    String state;
+    private String state;
     public RezervasyonFragment() {
     }
 
@@ -40,15 +41,16 @@ public class RezervasyonFragment extends BaseFragment {
     protected void init() {
         checkYikama=getActivity().findViewById(R.id.checkYikama);
         checkYakit=getActivity().findViewById(R.id.checkYakit);
-        btnOnay=getActivity().findViewById(R.id.btnRez);
+        btnRez=getActivity().findViewById(R.id.btnRez);
         edtnot=getActivity().findViewById(R.id.edtNot);
+        checkOnay=getActivity().findViewById(R.id.checkOnay);
         service= ClientApi.RequestRetrofit().create(EmployeeApi.class);
     }
 
     @Override
     protected void handlers() {
 
-        btnOnay.setOnClickListener(new View.OnClickListener() {
+        btnRez.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (checkYikama.isChecked()){
@@ -82,7 +84,9 @@ public class RezervasyonFragment extends BaseFragment {
                 });
             }
         });
-
+             if (checkOnay.isChecked()){
+                 Toast.makeText(getContext(), "REZERVASYONUNUZ ALINMIŞTIR ! ", Toast.LENGTH_LONG).show();
+             }
     }
 }
 
