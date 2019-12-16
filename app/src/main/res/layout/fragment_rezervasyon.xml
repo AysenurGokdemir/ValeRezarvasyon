@@ -63,13 +63,13 @@
                             android:text="@string/company_name" />
 
                         <TextView
-                            android:textStyle="italic"
-                            android:textSize="12sp"
                             android:id="@+id/companyNameRez"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.6"
-                            android:text="" />
+                            android:text="ABC Vale Hizmetleri"
+                            android:textSize="12sp"
+                            android:textStyle="italic" />
 
                     </LinearLayout>
                     <View
@@ -94,13 +94,13 @@
                             android:text="@string/companyDistance" />
 
                         <TextView
-                            android:textStyle="italic"
-                            android:textSize="12sp"
                             android:id="@+id/companyDistanceRez"
-                            android:text=""
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="0.6" />
+                            android:layout_weight="0.6"
+                            android:text="10m"
+                            android:textSize="12sp"
+                            android:textStyle="italic" />
                     </LinearLayout>
 
 
@@ -130,13 +130,13 @@
                             android:text="@string/companyService" />
 
                         <TextView
-                            android:textStyle="italic"
-                            android:textSize="12sp"
                             android:id="@+id/companyServiceRez"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.6"
-                            android:text="" />
+                            android:text="Var"
+                            android:textSize="12sp"
+                            android:textStyle="italic" />
 
                     </LinearLayout>
 
@@ -157,13 +157,13 @@
                             android:text="@string/serviceTime" />
 
                         <TextView
-                            android:textStyle="italic"
-                            android:textSize="12sp"
                             android:id="@+id/companyTimeRez"
-                            android:text=""
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="0.6" />
+                            android:layout_weight="0.6"
+                            android:text="09:00 - 23:00"
+                            android:textSize="12sp"
+                            android:textStyle="italic" />
                     </LinearLayout>
                     <View
                         android:layout_width="match_parent"

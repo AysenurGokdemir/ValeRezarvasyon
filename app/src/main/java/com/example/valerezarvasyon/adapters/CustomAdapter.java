@@ -14,6 +14,7 @@ import com.example.valerezarvasyon.model.Company;
 import java.util.List;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder>  {
@@ -46,6 +47,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         viewHolder.companyDistance.setText(companyArrayList.get(position).getFirmaDistance());
         viewHolder.companyService.setText(companyArrayList.get(position).getFirmaService());
         viewHolder.companyServiceTime.setText(companyArrayList.get(position).getFirmaServiceTime());
+
     }
 
     @Override
@@ -60,6 +62,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         private TextView companyDistance;
         private TextView companyService;
         private TextView companyServiceTime;
+        private CardView card_view ;
 
         public MyViewHolder(View view) {
             super(view);
@@ -67,6 +70,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             companyDistance = view.findViewById(R.id.companyDistance);
             companyService = view.findViewById(R.id.companyService);
             companyServiceTime = view.findViewById(R.id.companyServiceTime);
+            card_view=view.findViewById(R.id.card_view);
 
 
 

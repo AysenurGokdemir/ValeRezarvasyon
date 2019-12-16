@@ -35,7 +35,8 @@ public class SignInFragment extends BaseFragment {
              @Override
              public void onClick(View view) {
 
-                 listener.onFragmentChange(FragmentController.COMPANY);
+                 //listener.onFragmentChange(FragmentController.COMPANY);
+                 listener.onFragmentChange(FragmentController.REZERVASYON);
              }
          });
          register.setOnClickListener(new View.OnClickListener() {

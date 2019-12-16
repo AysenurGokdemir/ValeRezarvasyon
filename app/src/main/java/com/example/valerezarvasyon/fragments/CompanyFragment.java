@@ -21,6 +21,7 @@ public class CompanyFragment extends BaseFragment {
     private CustomAdapter customAdapter;
     private List<Company> companyResult;
 
+
     public CompanyFragment() {
     }
 
@@ -31,6 +32,7 @@ public class CompanyFragment extends BaseFragment {
 
     @Override
     protected void init() {
+
         recyclerView = getActivity().findViewById(R.id.recycler_view);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(mLayoutManager);
@@ -38,7 +40,10 @@ public class CompanyFragment extends BaseFragment {
 
     @Override
     protected void handlers() {
+
+
         EmployeeApi employeeApi= ClientApi.RequestRetrofit().create(EmployeeApi.class);
+
 
         Call<List<Company>> call=employeeApi.getCompany();
         call.enqueue(new Callback<List<Company>>() {
@@ -61,8 +66,9 @@ public class CompanyFragment extends BaseFragment {
                 t.printStackTrace();
             }
         });
-    }
 
+
+    }
 
 
 }

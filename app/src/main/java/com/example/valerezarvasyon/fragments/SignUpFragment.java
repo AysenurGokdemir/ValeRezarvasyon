@@ -33,6 +33,7 @@ public class SignUpFragment extends BaseFragment {
     private EditText edtSignupPassword;
     private EditText edtSignupPhoneNumber;
     private Button btnSignup;
+    private Button btnCompany;
     private List<List<Employee>> userResponseList;
     private FragmentController fragmentController = new FragmentController();
     private EmployeeApi service;
@@ -54,6 +55,7 @@ public class SignUpFragment extends BaseFragment {
         edtSignupPassword = getActivity().findViewById(R.id.edt_password);
         edtSignupPhoneNumber = getActivity().findViewById(R.id.edt_telepone_number);
         btnSignup = getActivity().findViewById(R.id.angry_btn);
+        btnCompany=getActivity().findViewById(R.id.btnCompany);
         service = ClientApi.RequestRetrofit().create(EmployeeApi.class);
     }
 
@@ -91,6 +93,14 @@ public class SignUpFragment extends BaseFragment {
 
                 });
                 listener.onFragmentChange(FragmentController.LOGIN);
+            }
+        });
+
+        btnCompany.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                listener.onFragmentChange(FragmentController.COMPANY);
             }
         });
     }
